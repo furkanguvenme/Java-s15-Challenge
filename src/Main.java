@@ -1,8 +1,9 @@
 import com.library.*;
 import com.library.enums.BookType;
+import com.library.enums.ReaderType;
 import com.library.enums.Status;
 
-import java.time.LocalDate;
+import java.util.HashSet;
 import java.util.Scanner;
 
 public class Main {
@@ -27,6 +28,8 @@ public class Main {
         Library.getLibrary().addLibrarian(new Librarian(1,"Furkan", "test123"));
         Library.getLibrary().addLibrarian(new Librarian(2,"Yunus", "test789"));
         Library.getLibrary().addLibrarian(new Librarian(3,"Batuhan", "test456"));
+
+        Library.getLibrary().addUser(1,new Reader(17,"Furkan","Yeşilpınar EyüpSultan", "5385486522", new HashSet<>(),5, ReaderType.STUDENT));
 
         Library.library.showBooks();
 
